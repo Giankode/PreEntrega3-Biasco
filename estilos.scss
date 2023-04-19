@@ -1,0 +1,822 @@
+//SCSS al Index//
+//Variable$//
+
+
+$bg-color-header: #2b272b; //background-color header//
+$bg-color-nav: rgba(37, 37, 37, 0.9); //bg del nav//
+$bg-color-main: rgba(50,50, 50, 0.9); //bg de toda la main section//
+$text-color: #e6dfe6; //color h2-header//
+$text-shadow: 3px 3px 15px #8e6ead; //propiedades de las sombras de textos//
+$text-a-hover: #875687; //cuando pasamos el mouse x los anchor cambia de color//
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("imagenes/arcades.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.header{
+    padding: 50px;
+    //background-color: rgba(50,50, 50, 0.8);//
+    background-color: $bg-color-header;
+    //width: 100%;*/ /*en este caso no lo pongo porque se pasa de la resolucion de la pantalla//
+    // aca determine el ancho de la caja contenedora // sirve para el grid tambien //
+}
+
+
+//  Animacion de cartel luminoso titilando del h2 //
+
+
+.h2-header{
+    color: $text-color;
+    text-shadow: $text-shadow;
+    animation-name: light;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes light{
+    0%{
+        color: #6e6e6e;
+        //text-shadow: $text-shadow
+    }
+    10%{
+        color: #f9f9f9;
+        //text-shadow: 5px 5px 17px #c3a3e2;
+    }
+
+    15%{
+        color: #6e6e6e;
+       // text-shadow: $text-shadow
+    }
+
+    20%{
+        color: #f9f9f9;
+        //text-shadow: 5px 5px 17px #c3a3e2;
+    }
+
+    25%{
+        color: #6e6e6e;
+        //text-shadow: $text-shadow
+    }
+
+    50%{
+        color: #f9f9f9;
+       // text-shadow: 5px 5px 17px #c3a3e2;
+    }
+
+    55%{
+        color: #6e6e6e;
+        text-shadow: $text-shadow
+    }
+
+    60%{
+        color: #f9f9f9;
+        text-shadow: 5px 5px 17px #c3a3e2;
+    }
+
+    100%{
+        color: #6e6e6e;
+        text-shadow: $text-shadow;
+    }
+
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    //background-color:#2b272b;//
+    background-color: $bg-color-nav;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    //justify-content: end;//
+    //esto hace que acomode (en este caso) los links al final de la fila//
+    
+}
+
+
+.nav, .portafolio, .habilidades{
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: large;
+    color: $text-color;
+    text-shadow: $text-shadow;
+    
+}
+
+ul{
+    list-style: none;
+    // saco los puntitos de la lista desordenada //
+}
+
+
+li{
+    display: inline;
+    // esto hace que acomode cada enlace al lado del otro //
+}
+
+a:hover{
+    color: $text-a-hover;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    //background-color:#2b272b;//
+    background-color: $bg-color-main;
+}
+
+.img{
+    padding: 20px;
+    flex: 30px;
+    align-items: center;
+}
+
+.yo{
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 70px;
+
+}
+
+.contenido{
+    flex: 30%;
+    color: $text-color;
+    // background-color: red;//
+    padding-bottom: 20px;
+}
+
+.h2-contenido{
+    margin-top: 35px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.h1-contenido{
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 40px;
+    //color: $text-a-hover;//
+    color: $text-color;
+    text-shadow: $text-shadow;
+}
+
+.box {
+    width: 900px;
+    height: 5px;
+    background-color: $text-a-hover;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+
+p{
+    margin-top: 15px;
+    margin-left: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.footer{
+    text-align: center;
+    padding-top: 16%;
+    padding-bottom: 20px;
+    color: $text-color;
+    //background-color:#2b272b;//
+    background-color: $bg-color-main;
+}
+
+.redes{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+}
+
+
+.ds{
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    right: 90px;
+    filter: brightness(70%);
+    transition: transform 1.2s ease;
+}
+
+.ds:hover{
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+    filter: brightness(120%);
+}
+
+.fb{
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    right: 30px;
+    padding-left: 20px;
+    filter: brightness(70%);
+    transition: transform 1.2s ease;
+}
+
+.fb:hover{
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+    filter: brightness(120%);
+}
+
+.ws{
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    left: 30px;
+    padding-left: 20px;
+    filter: brightness(70%);
+    transition: transform 1.2s ease;
+}
+
+.ws:hover{
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+    filter: brightness(120%);
+    
+}
+
+.ig{
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    left: 100px;
+    padding-left: 20px;
+    filter: brightness(70%);
+    transition: transform 1.2s ease;
+}
+
+.ig:hover{
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+    filter: brightness(120%);
+}
+
+
+/*@media screen and (max-width: 700px){
+    nav , main {
+        flex-direction: column;
+    }
+}*/
+
+@media (max-width: 600px){
+    //( hasta los 600px tendra estas caracteristicas//
+    .img{
+        flex: 100%;
+        padding-left: 50px;
+    }
+    .p-section{
+        padding-right: 20px;
+    }
+}
+
+@media (min-width: 600px){
+    //pasando los 600px tendra estas caracteristicas//
+    .img{
+        flex: 20%;
+        padding-left: 50px;
+        padding-bottom: 20px;
+    }
+}
+
+//-----CSS PARA skills-vj-----//
+//SCSS al skills-vj//
+
+.header-vj{
+    padding: 50px;
+    //background-color: rgba(50,50, 50, 0.8);//
+    background-color: $bg-color-header;
+    /*width: 100%;*/ /*en este caso no lo pongo porque se pasa de la resolucion de la pantalla*/
+    /* aca determine el ancho de la caja contenedora // sirve para el grid tambien */
+}
+
+
+//  Animacion de cartel luminoso titilando del h2 //
+
+
+.h2-header-vj{
+    color: $text-color;
+    text-shadow: $text-shadow;
+
+    animation-name: light;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes light{
+    0%{
+        color: #6e6e6e;
+        //text-shadow: $text-shadow
+    }
+    10%{
+        color: #f9f9f9;
+        //text-shadow: 5px 5px 17px #c3a3e2;
+    }
+
+    15%{
+        color: #6e6e6e;
+       // text-shadow: $text-shadow
+    }
+
+    20%{
+        color: #f9f9f9;
+        //text-shadow: 5px 5px 17px #c3a3e2;
+    }
+
+    25%{
+        color: #6e6e6e;
+        //text-shadow: $text-shadow
+    }
+
+    50%{
+        color: #f9f9f9;
+       // text-shadow: 5px 5px 17px #c3a3e2;
+    }
+
+    55%{
+        color: #6e6e6e;
+        text-shadow: $text-shadow
+    }
+
+    60%{
+        color: #f9f9f9;
+        text-shadow: 5px 5px 17px #c3a3e2;
+    }
+
+    100%{
+        color: #6e6e6e;
+        text-shadow: $text-shadow;
+    }
+
+}
+
+.nav-vj{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    //background-color:#2b272b;//
+    background-color: $bg-color-nav;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    /*justify-content: end;*/
+    /*esto hace que acomode (en este caso) los links al final de la fila*/
+    
+}
+
+
+.nav-vj, .portafolio, .inicio{
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: large;
+    color: $text-color;
+    text-shadow: $text-shadow;
+    
+}
+
+ul{
+    list-style: none;
+    /* saco los puntitos de la lista desordenada*/
+}
+
+
+li{
+    display: inline;
+    /*esto hace que acomode cada enlace al lado del otro*/
+}
+
+a:hover{
+    color: $text-a-hover;
+}
+
+.main-vj{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    //background-color:#2b272b;//
+    background-color: $bg-color-main;
+}
+
+.img-vj{
+    padding: 20px;
+    flex: 30px;
+    align-items: center;
+}
+
+.ux-icon{
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 70px;
+    transition: transform 1.2s ease;
+
+}
+
+.ux-icon:hover{
+    filter: brightness(150%);
+    transform: scale(1.2);
+    transition: transform 1s ease;
+}
+
+.contenido-vj{
+    flex: 30%;
+    color: $text-color;
+    /*background-color: red;*/
+    padding-bottom: 20px;
+}
+
+.h2-contenido-vj{
+    margin-top: 35px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.h1-contenido-vj{
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 40px;
+    //color: #875687;//
+    color: $text-color;
+    text-shadow: $text-color;
+}
+
+.box {
+    width: 50px;
+    height: 5px;
+    background-color: $text-a-hover;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+p{
+    margin-top: 15px;
+    margin-left: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.footer{
+    text-align: center;
+    padding-top: 16%;
+    padding-bottom: 20px;
+    color: $text-color;
+    //background-color:#2b272b;//
+    background-color: $bg-color-main;
+  
+}
+
+.redes{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+}
+
+
+.ds{
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    right: 90px;
+}
+
+.fb{
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    right: 30px;
+    padding-left: 20px;
+}
+
+.ws{
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    left: 30px;
+    padding-left: 20px;
+}
+
+.ig{
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    left: 100px;
+    padding-left: 20px;
+}
+
+/*@media screen and (max-width: 700px){
+    nav , main {
+        flex-direction: column;
+    }
+}*/
+
+@media (max-width: 600px){
+    /* hasta los 600px tendra estas caracteristicas*/
+    .img-vj{
+        flex: 100%;
+        padding-left: 50px;
+    }
+    .p-section{
+        padding-right: 20px;
+    }
+}
+
+@media (min-width: 600px){
+    /*pasando los 600px tendra estas caracteristicas*/
+    .img{
+        flex: 20%;
+        padding-left: 50px;
+        padding-bottom: 20px;
+    }
+}
+
+
+/*-----CSS PARA skills-ux-----*/
+//SCSS al skills-ux//
+
+.header-ux{
+    padding: 50px;
+    //background-color: rgba(50,50, 50, 0.8);//
+    background-color: $bg-color-header;
+    /*width: 100%;*/ /*en este caso no lo pongo porque se pasa de la resolucion de la pantalla*/
+    /* aca determine el ancho de la caja contenedora // sirve para el grid tambien */
+}
+
+
+//  Animacion de cartel luminoso titilando del h2 //
+
+
+.h2-header-ux{
+    color: $text-color;
+    text-shadow: $text-shadow;
+
+    animation-name: light;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes light{
+    0%{
+        color: #6e6e6e;
+        //text-shadow: $text-shadow
+    }
+    10%{
+        color: #f9f9f9;
+        //text-shadow: 5px 5px 17px #c3a3e2;
+    }
+
+    15%{
+        color: #6e6e6e;
+       // text-shadow: $text-shadow
+    }
+
+    20%{
+        color: #f9f9f9;
+        //text-shadow: 5px 5px 17px #c3a3e2;
+    }
+
+    25%{
+        color: #6e6e6e;
+        //text-shadow: $text-shadow
+    }
+
+    50%{
+        color: #f9f9f9;
+       // text-shadow: 5px 5px 17px #c3a3e2;
+    }
+
+    55%{
+        color: #6e6e6e;
+        text-shadow: $text-shadow
+    }
+
+    60%{
+        color: #f9f9f9;
+        text-shadow: 5px 5px 17px #c3a3e2;
+    }
+
+    100%{
+        color: #6e6e6e;
+        text-shadow: $text-shadow;
+    }
+
+}
+
+.nav-ux{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    //background-color:#2b272b;//
+    background-color: $bg-color-nav;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    /*justify-content: end;*/
+    /*esto hace que acomode (en este caso) los links al final de la fila*/
+    
+}
+
+
+.nav-ux, .portafolio, .inicio{
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: large;
+    color: $text-color;
+    text-shadow: $text-shadow;
+    
+}
+
+ul{
+    list-style: none;
+    /* saco los puntitos de la lista desordenada*/
+}
+
+
+li{
+    display: inline;
+    /*esto hace que acomode cada enlace al lado del otro*/
+}
+
+a:hover{
+    color: $text-a-hover;
+}
+
+.main-ux{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    //background-color:#2b272b;//
+    background-color: $bg-color-main;
+}
+
+.img-ux{
+    padding: 20px;
+    flex: 30px;
+    align-items: center;
+}
+
+.vj-icon{
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 70px;
+    transition: transform 1.2s ease;
+
+}
+
+.vj-icon:hover{
+    filter: brightness(150%);
+    transform: scale(1.2);
+    transition: transform 1s ease;
+}
+
+.contenido-ux{
+    flex: 30%;
+    color: $text-color;
+    /*background-color: red;*/
+    padding-bottom: 20px;
+}
+
+.h2-contenido-ux{
+    margin-top: 35px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.h1-contenido-ux{
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: 40px;
+    //color: #875687;//
+    color: $text-color;
+    text-shadow: $text-shadow;
+}
+
+
+//  Animacion de la barra morada como un loader //
+
+
+.box {
+    width: 50px;
+    height: 5px;
+    background-color: $text-a-hover;
+    margin-left: 20px;
+    margin-top: 10px;
+
+    
+    animation-name: boxstretch;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes boxstretch{
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 50px;
+    }
+}
+
+
+p{
+    margin-top: 15px;
+    margin-left: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+
+
+.footer{
+    text-align: center;
+    padding-top: 16%;
+    padding-bottom: 20px;
+    color: $text-color;
+    //background-color:#2b272b;//
+    background-color: $bg-color-main;
+  
+}
+
+.redes{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+}
+
+
+.ds{
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    right: 90px;
+}
+
+.fb{
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    right: 30px;
+    padding-left: 20px;
+}
+
+.ws{
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    left: 30px;
+    padding-left: 20px;
+}
+
+.ig{
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    left: 100px;
+    padding-left: 20px;
+}
+
+/*@media screen and (max-width: 700px){
+    nav , main {
+        flex-direction: column;
+    }
+}*/
+
+@media (max-width: 600px){
+    /* hasta los 600px tendra estas caracteristicas*/
+    .img-ux{
+        flex: 100%;
+        padding-left: 50px;
+    }
+    .p-section{
+        padding-right: 20px;
+    
+    }
+}
+
+@media (min-width: 600px){
+    /*pasando los 600px tendra estas caracteristicas*/
+    .img{
+        flex: 20%;
+        padding-left: 50px;
+        padding-bottom: 20px;
+    }
+}
